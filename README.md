@@ -1,11 +1,11 @@
 # ProteinMPNN
 
+![ProteinMPNN](https://docs.google.com/drawings/d/e/2PACX-1vTtnMBDOq8TpHIctUfGN8Vl32x5ISNcPKlxjcQJF2q70PlaH2uFlj2Ac4s3khnZqG1YxppdMr0iTyk-/pub?w=889&h=358)
+Read [ProteinMPNN paper](https://www.biorxiv.org/content/10.1101/2022.06.03.494563v1).
+
 "pip install proteinmpnn"
 
 Requires Python >=3.9, <3.13
-
-![ProteinMPNN](https://docs.google.com/drawings/d/e/2PACX-1vTtnMBDOq8TpHIctUfGN8Vl32x5ISNcPKlxjcQJF2q70PlaH2uFlj2Ac4s3khnZqG1YxppdMr0iTyk-/pub?w=889&h=358)
-Read [ProteinMPNN paper](https://www.biorxiv.org/content/10.1101/2022.06.03.494563v1).
 
 Full protein backbone models: `vanilla_model_weights/v_48_002.pt, v_48_010.pt, v_48_020.pt, v_48_030.pt`, `soluble_model_weights/v_48_010.pt, v_48_020.pt`.
 
@@ -16,11 +16,6 @@ Helper scripts: `helper_scripts` - helper functions to parse PDBs, assign which 
 Code organization:
 * `protein_mpnn_run.py` - the main script to initialialize and run the model.
 * `protein_mpnn_utils.py` - utility functions for the main script.
-* `examples/` - simple code examples.
-* `inputs/` - input PDB files for examples
-* `outputs/` - outputs from examples
-* `colab_notebooks/` - Google Colab examples
-* `training/` - code and data to retrain the model
 -----------------------------------------------------------------------------------------------------
 Input flags for `protein_mpnn_run.py`:
 ```
