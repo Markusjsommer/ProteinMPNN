@@ -7,9 +7,12 @@ Read [ProteinMPNN paper](https://www.biorxiv.org/content/10.1101/2022.06.03.4945
 
 Requires Python >=3.9, <3.13
 
-Full protein backbone models: `vanilla_model_weights/v_48_002.pt, v_48_010.pt, v_48_020.pt, v_48_030.pt`, `soluble_model_weights/v_48_010.pt, v_48_020.pt`.
+    # Example usage
+    proteinmpnn --out-folder outdir --pdb-path foo.pdb
+    proteinmpnn --out-folder outdir --pdb-path foo.pdb --use-soluble-model
+    proteinmpnn --out-folder outdir --jsonl_path bar.jsonl
 
-CA only models: `ca_model_weights/v_48_002.pt, v_48_010.pt, v_48_020.pt`. Enable flag `--ca_only` to use these models.
+See original repo https://github.com/dauparas/ProteinMPNN for more examples and code for retraining.
 
 Helper scripts: `helper_scripts` - helper functions to parse PDBs, assign which chains to design, which residues to fix, adding AA bias, tying residues etc.
 
@@ -55,26 +58,6 @@ Input flags for `protein_mpnn_run.py`:
     argparser.add_argument("--tied_positions_jsonl", type=str, default='', help="Path to a dictionary with tied positions")
 
 ```
------------------------------------------------------------------------------------------------------
-For example to make a conda environment to run ProteinMPNN:
-* `conda create --name mlfold` - this creates conda environment called `mlfold`
-* `source activate mlfold` - this activate environment
-* `conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch` - install pytorch following steps from https://pytorch.org/
------------------------------------------------------------------------------------------------------
-These are provided `examples/`:
-* `submit_example_1.sh` - simple monomer example 
-* `submit_example_2.sh` - simple multi-chain example
-* `submit_example_3.sh` - directly from the .pdb path
-* `submit_example_3_score_only.sh` - return score only (model's uncertainty)
-* `submit_example_3_score_only_from_fasta.sh` - return score only (model's uncertainty) loading sequence from fasta files
-* `submit_example_4.sh` - fix some residue positions
-* `submit_example_4_non_fixed.sh` - specify which positions to design
-* `submit_example_5.sh` - tie some positions together (symmetry)
-* `submit_example_6.sh` - homooligomer example
-* `submit_example_7.sh` - return sequence unconditional probabilities (PSSM like)
-* `submit_example_8.sh` - add amino acid bias
-* `submit_example_pssm.sh` - use PSSM bias when designing sequences
------------------------------------------------------------------------------------------------------
 Output example:
 ```
 >3HTN, score=1.1705, global_score=1.2045, fixed_chains=['B'], designed_chains=['A', 'C'], model_name=v_48_020, git_hash=015ff820b9b5741ead6ba6795258f35a9c15e94b, seed=37
