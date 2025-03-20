@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
     
 setup(
     name="proteinmpnn",
-    version="0.1.0",
+    version="0.1.2",
     description="a slightly cleaned up installable version of ProteinMPNN",
     packages=find_packages(),
     long_description=long_description,
@@ -24,14 +24,12 @@ setup(
                       "torchvision>=0.16.2",
                       "torchaudio>=2.1.2",
                       "typing-extensions>=4.9.0",
-                      "tqdm>=4.66.1",
-                      "numpy>=1.24.4",
-                      "pandas>=2.0.3",
+                      "numpy>=1.24.4, <2",
                       "setuptools"],
     extras_require={
         "dev": ["pytest>=7.0", "twine>=4.0.2", "pytest-cov>=4.0", "wheel"],
     },
-    python_requires=">=3.8",
+    python_requires=">=3.9, <3.13",
     entry_points={
        'console_scripts': [
             'proteinmpnn = proteinmpnn.protein_mpnn_run:main',
