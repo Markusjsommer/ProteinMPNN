@@ -5,13 +5,13 @@ with open("README.md", "r") as f:
     
 setup(
     name="proteinmpnn",
-    version="0.1.2",
+    version="0.1.3",
     description="a slightly cleaned up installable version of ProteinMPNN",
     packages=find_packages(),
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Markusjsommer/ProteinMPNN",
-    author="installable version by markus. originally and primarily authored by Justas Dauparas.",
+    author="originally and primarily authored by Justas Dauparas. installable version by markus.",
     author_email = "installable: markusjsommer@gmail.com ; original: justas@uw.edu",
     license="MIT",
     classifiers=[

@@ -465,7 +465,7 @@ def main():
                 total_length = X.shape[1]
                 if print_all:
                     print(f'{num_seqs} sequences of length {total_length} generated in {dt} seconds')
-    print("\nPackaged by Markus J. Sommer with minor modifications for security and usability. Originally and primarily authored by Justas Dauparas.", flush=True)
+    print("\nOriginally and primarily authored by Justas Dauparas. Packaged by Markus J. Sommer with minor modifications for security and usability.", flush=True)
     print("Please cite J. Dauparas, I. Anishchenko, N. Bennett, H. Bai, R. J. Ragotte, L. F. Milles, B. I. M. Wicky, A. Courbet, R. J. de Haas, N. Bethel, P. J. Y. Leung, T. F. Huddy, S. Pellock, D. Tischer, F. Chan, B. Koepnick, H. Nguyen, A. Kang, B. Sankaran, A. K. Bera, N. P. King, D. Baker, Robust deep learning-based protein sequence design using ProteinMPNN. Science 378, 49–56 (2022).\n", flush=True)
 
 if __name__ == "__main__":
